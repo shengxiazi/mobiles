@@ -1,0 +1,73 @@
+html,body{
+    height: 100%;
+}
+
+/*分类主体*/
+.jd_category{
+    height: 100%;
+    padding-top: 45px;
+    overflow: hidden;
+}
+/*左侧菜单*/
+.jd_category_left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+.jd_category_left ul{
+
+}
+.jd_category_left ul li{
+    height: 50px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #f3f4f6;
+    text-align: center;
+    line-height: 50px;
+}
+.jd_category_left ul li.now{
+    border-right: none;
+    background: #fff;
+}
+.jd_category_left ul li a{
+    display: block;
+}
+.jd_category_left ul li.now a{
+    color: #d8505c;
+}
+/*右内容*/
+.jd_category_right{
+    overflow: hidden;
+    height: 100%;
+}
+.jd_category_right_con .banner{
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+.jd_category_right_con .banner img{
+    width: 100%;
+    display: block;
+}
+.jd_category_right_con .product_box{
+    padding: 0 10px;
+}
+.jd_category_right_con .product_box h3{
+    font-size: 12px;
+    line-height: 30px;}
+.jd_category_right_con .product_box ul li{
+    float: left;
+    width: 33.333%;
+}
+.jd_category_right_con .product_box ul li img{
+    width: 62px;
+    height: 62px;
+    display: block;
+    margin:  0 auto;
+}
+.jd_category_right_con .product_box ul li p{
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+}

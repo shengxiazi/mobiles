@@ -1,0 +1,313 @@
+@charset "UTF-8";
+body{
+    background: #f5f5f5;
+}
+/* 顶部通栏 */
+.jd_topBar {
+    position: static;
+}
+
+
+/* 安全提示 */
+.jd_safeTip {
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jd_safeTip p {
+    height: 34px;
+    padding-left: 23px;
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+}
+.jd_safeTip p::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url("../images/safe_icon.png") no-repeat;
+    /* 父容器的内容 */
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+}
+
+
+/* 公用复选框样式 */
+.check_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 34px;
+}
+.check_box .jd_check_box {
+    display: block;
+    width: 40px;
+    height: 34px;
+    padding: 7px 10px;
+    background: url(../images/shop-icon.png) no-repeat;
+    -webkit-background-size: 50px 100px;
+    background-size: 50px 100px;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-position: 0 0;
+}
+.check_box .jd_check_box[checked] {
+    background-position: -25px 0;
+}
+
+/* 店铺 */
+.jd_shop {
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+}
+
+/* 标题 */
+.jd_shop_tit {
+    width: 100%;
+    height: 34px;
+    /* 行高  文本的行框 */
+    line-height: 34px;
+    position: relative;
+}
+
+.jd_shop_tit .jd_shop_tit_right {
+    width: 100%;
+    height: 34px;
+    padding-left: 40px;
+    font-size: 12px;
+}
+.jd_shop_tit .jd_shop_tit_right .f_left {
+
+}
+.jd_shop_tit .jd_shop_tit_right .f_left img {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-top: 10px;
+}
+.jd_shop_tit .jd_shop_tit_right .f_left span {
+    float: left;
+    font-size: 15px;
+    color: #666;
+    margin-left: 5px;
+}
+.jd_shop_tit .jd_shop_tit_right .f_right {
+    color: #d8505c;
+    margin-right: 10px;
+}
+
+.jd_shop ..jd_shop_con  {
+
+}
+
+/* 商品信息 */
+.product_box {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    border-top: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+.product_box .product_box_right {
+    width: 100%;
+    padding-left: 40px;
+}
+.product_box .product_box_right .img_box {
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+.product_box .product_box_right .img_box img {
+    /* height: 80px; */
+    /* width: 80px; */
+    width: 100%;
+    height: 100%;
+}
+.product_box .product_box_right .info_box {
+    padding: 0 10px;
+    /* 文本环绕 */
+    overflow: hidden;
+}
+
+.info_box .name {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 15px;
+    overflow: hidden;
+
+}
+.info_box .price {
+    color: #d8505c;
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+/* 加减 */
+.info_box .option {
+
+}
+.info_box .option .change_box {
+    float: left;
+}
+.info_box .option .change_box span {
+    float: left;
+    width: 32px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border: 1px solid #ccc;
+}
+.info_box .option .change_box span:first-of-type {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.info_box .option .change_box span:last-of-type {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.info_box .option .change_box input {
+    float: left;
+    width: 32px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+/* 删除 */
+.info_box .option  .delete_box {
+    float: right;
+}
+.info_box .option  .delete_box i:first-child {
+    display: block;
+    height: 5px;
+    width: 20px;
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    margin-left: -1px;
+}
+.info_box .option  .delete_box i:last-child {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px;
+    margin-top: -2px;
+}
+
+
+/* 弹出层 */
+.jd_win {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: none;
+}
+.jd_win .jd_win_box {
+    width: 80%;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 0 10px;
+}
+.jd_win .jd_win_box .text_box {
+    text-align: center;
+    font-size: 18px;
+    line-height: 75px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jd_win .jd_win_box .btn_box {
+    padding: 10px 0;
+}
+.jd_win .jd_win_box .btn_box a {
+    width: 45%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    float: left;
+    border-radius: 4px;
+}
+.jd_win .jd_win_box .btn_box .cancel {
+    margin-right: 10%;
+    border: 1px solid #e0e0e0;
+}
+.jd_win .jd_win_box .btn_box .submit {
+    background: #d8505c;
+    color: #fff;
+}
+
+/* 弹出层动画 */
+.jd_win .jd_win_box.bounceInDown{
+    animation: bounceInDown 1s;
+    -webkit-animation: bounceInDown 1s;
+}
+
+/*bounceInDown*/
+@keyframes bounceInDown {
+     0%{
+         opacity: 0;
+         -webkit-transform: translateY(-3000px);
+         transform: translateY(-3000px);
+     }
+     60%{
+         opacity: 1;
+         -webkit-transform: translateY(25px);
+         transform: translateY(25px);
+     }
+     75%{
+         -webkit-transform: translateY(-10px);
+         transform: translateY(-10px);
+     }
+     90%{
+         -webkit-transform: translateY(5px);
+         transform: translateY(5px);
+     }
+     100%{
+         opacity: 1;
+         -webkit-transform:none;
+         transform:none;
+     }
+ }
+@-webkit-keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    75%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:none;
+        transform:none;
+    }
+}

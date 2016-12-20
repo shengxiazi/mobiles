@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>播放器</title>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/player.css">
+</head>
+<body>
+    <figure>
+        <figcaption>好简单的视频播放器</figcaption>
+        <div class="player">
+            <video src="./video/fun.mp4"></video>
+            <div class="controls">
+                <!-- 播放/暂停 -->
+                <a href="javascript:;" class="switch fa fa-play"></a>
+                <!-- 全屏 -->
+                <a href="javascript:;" class="expand fa fa-expand"></a>
+                <!-- 进度条 -->
+                <div class="progress">
+                    <div class="loaded"></div>
+                    <div class="line"></div>
+                    <div class="bar"></div>
+                </div>
+                <!-- 时间 -->
+                <div class="timer">
+                    <span class="current">00:00:00</span> /
+                    <span class="total">00:00:00</span>
+                </div>
+                <!-- 声音 -->
+            </div>
+        </div>
+        <figcaption>真简单的音频播放器</figcaption>
+        <audio autobuffer autoloop loop controls>
+            <source src="audio/薛之谦 - 演员.mp3">
+            <source src="audio/薛之谦 - 刚刚好.mp3">
+            <source src="audio/薛之谦 - 你还要我怎样.mp3">
+        </audio>
+    </figure>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>

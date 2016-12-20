@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/*设置默认编码集*/
+/*css 初始化 重置reset*/
+/* html, body, header,nav,main,section,footer,article,aside,figure,ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, a,fieldset, legend, img ,input,textarea,i,span {
+    margin: 0;
+    padding: 0;
+     清除点击高亮  兼容移动端低版本浏览器
+    -webkit-tap-highlight-color: transparent;
+    盒子宽度从边框开始计算
+    box-sizing: border-box;
+ }
+ */
+
+* ,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+     /* 清除点击高亮  兼容移动端低版本浏览器 */
+    -webkit-tap-highlight-color: transparent;
+    /* 盒子宽度从边框开始计算 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*各浏览器显示不同，去掉边框等默认样式*/
+input, button,textarea {
+    border: none;
+    outline-style: none;
+    resize: none;
+    -webkit-appearance: none;  /*组件默认的样式空*/
+}
+ul, ol {
+    list-style: none;
+}
+select, input, textarea {
+    /* font-size: 12px; */
+    resize: none;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    /* vertical-align: middle; */
+    display: block;
+}
+table {
+    border-collapse: collapse;
+}
+
+/* 公用样式 */
+html,body {
+    /* 字体自适应 */
+    font: 14px "MicroSoft YaHei","sans-serif";   /*移动设备默认的字体 */
+    color: #333;
+    background: #f5f5f5;
+    /* overflow-x: hidden; */
+}
+/*伪元素清除浮动*/
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+     /* *zoom: 1;   /*IE8*/
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+}
+/*废物利用*/
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+/*京东色*/
+.col_red {
+    /* color: #C81623 !important; */
+}
+/*公共类*/
+.w {
+    /*版心 提取 */
+    /* width: 1210px; */
+    /* margin: 0 auto; */
+}
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+
+
+/* 所有使用精灵图的class  以 icon_ 开始的元素的公用样式 */
+[class^="icon_"] {
+    background: url(../images/sprites.png) no-repeat;
+    /* 压缩背景图 */
+    background-size: 200px 200px;
+}
+
+
+/* 公用顶部通栏 */
+.jd_topBar {
+   height: 45px;
+   background: url(../images/header-bg.png) repeat-x;
+   background-size: 1px 44px;
+   border-bottom: 1px solid #e0e0e0;
+   position: absolute;
+   width: 100%;
+}
+.jd_topBar [class^="icon_"] {
+  width: 40px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  /* 用户体验 */
+  padding: 12px 10px;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+.jd_topBar .icon_back {
+    left: 0;
+    background-position: -20px 0;
+}
+.jd_topBar .icon_menu {
+    right: 0;
+    background-position: -60px 0;
+}
+.jd_topBar form {
+    width: 100%;
+    padding: 0 40px;
+}
+.jd_topBar form  input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin-top: 7px;
+}
+.jd_topBar h3 {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 44px;
+}
