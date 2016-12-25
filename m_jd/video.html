@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
     <title>播放器</title>
     <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="./css/player.css">
 </head>
 <body>
     <figure>
-        <figcaption>好简单的视频播放器</figcaption>
+        <!-- 广告栏 -->
+        <div class="jd_ad">
+            <div class="jd_ad_box hidden bounceInDown clearfix">
+                <div class="mask">
+                    <img id="im" src="images/img02.jpg" alt="">
+                    <a id="btn_close" href="javascript:void(0);">&#215;</a>
+                </div>
+            </div>
+        </div>
+        <figcaption>好逗比的视频播放器</figcaption>
         <div class="player">
-            <video src="./video/fun.mp4"></video>
+            <video>
+                <source src="./video/chrome.mp4">
+                <source src="./video/chrome.ogg">
+                <source src="./video/chrome.wem">
+               您的浏览器不支持HTML5视频播放功能
+            </video>
             <div class="controls">
                 <!-- 播放/暂停 -->
                 <a href="javascript:;" class="switch fa fa-play"></a>
@@ -30,36 +46,32 @@
                 <!-- 声音 -->
             </div>
         </div>
-        <figcaption>真简单的音频播放器</figcaption>
-        <audio autobuffer autoloop loop controls>
-            <source src="audio/薛之谦 - 演员.mp3">
+        <figcaption>真好玩的音频播放器</figcaption>
+        <audio  controls autoplay loop="3">
             <source src="audio/薛之谦 - 刚刚好.mp3">
-            <source src="audio/薛之谦 - 你还要我怎样.mp3">
+            <source src="audio/薛之谦 - 刚刚好.wav">
+            <source src="audio/薛之谦 - 刚刚好.ogg">
+            您的浏览器不支持HTML5音频播放功能
         </audio>
-        <div id="container">
-            <a href="http://kg.qq.com/share.html?s=GqLumjXf2f6J&amp;songid=1100008933&amp;from=timeline&amp;isappinstalled=1" class="fa fa-music">
-                <span>快点我哦，小样儿！</span>
-            </a>
-            <div class="box"><img src="images/img01.JPG" alt=""></div>
-            <div class="box"><img src="images/img02.JPG" alt=""></div>
-            <div class="box"><img src="images/img03.JPG" alt=""></div>
-            <div class="box"><img class="last_img" src="images/img04.JPG" alt=""></div>
-            <div class="box"><img src="images/img01.JPG" alt=""></div>
-            <div class="box"><img src="images/img02.JPG" alt=""></div>
-            <div class="box"><img src="images/img03.JPG" alt=""></div>
-            <div class="box"><img class="last_img" src="images/img04.JPG" alt=""></div>
-            <div class="box"><img src="images/img01.JPG" alt=""></div>
-            <div class="box"><img src="images/img02.JPG" alt=""></div>
-            <div class="box"><img src="images/img03.JPG" alt=""></div>
-            <div class="box"><img class="last_img" src="images/img04.JPG" alt=""></div>
-            <div class="box"><img src="images/img01.JPG" alt=""></div>
-            <div class="box"><img src="images/img02.JPG" alt=""></div>
-            <div class="box"><img src="images/img03.JPG" alt=""></div>
-            <div class="box"><img class="last_img" src="images/img04.JPG" alt=""></div>
+        <a href="http://kg.qq.com/share.html?s=GqLumjXf2f6J&amp;songid=1100008933&amp;from=timeline&amp;isappinstalled=1" class="fa fa-music" id="a_link"><span>快点我哦，小样儿！</span>
+        </a>
+        <div id="container" class="clearfix">
+            <div class="box box1">
+                <img src="images/img02.JPG" alt="">
+            </div>
+            <div class="box box2">
+                <img src="images/img01.JPG" alt="">
+            </div>
+             <div class="box box2">
+                <img src="images/img03.JPG" alt="">
+            </div>
+            <div class="box box2">
+                <img src="images/img05.PNG" alt="">
+            </div>
         </div>
     </figure>
-
     <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/player.js"></script>
 </body>
 </html>

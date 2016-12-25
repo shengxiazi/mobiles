@@ -84,8 +84,32 @@ function player () {
     });
 }
 
+// 弹出广告栏
+function closeAd () {
+    var bodyBox = document.querySelector(".jd_ad");
+    var bodyBox2 = document.querySelector(".jd_ad_box");
+    var box = document.querySelector(".mask");
+    var btnBox = document.getElementById("btn_close");
+    var imgBox = document.getElementById("im");
+
+    alice.tap(btnBox,function () {
+        imgBox.style.display = "none";
+        bodyBox.removeChild(bodyBox2);
+        /*显示弹出层*/
+        bodyBox.style.display = "block";
+        /*加动画*/
+        box.className = "jd_win_box bounceInDown";
+        // window.open("video.html");
+    });
+}
+
 /*瀑布流 图片资源*/
 window.onload = function () {
+    flow();
+    closeAd();
+}
+
+function flow() {
         //高度最小的那一行 然后把图片放到那个位置
         var container = document.getElementById("container");
         var boxes = container.children;
@@ -94,7 +118,7 @@ window.onload = function () {
         var pageWidth = window.innerWidth;
         var boxWidth = boxes[0].offsetWidth;
         var column = Math.floor(pageWidth / boxWidth);
-       /* 2.用一个数组保存 每一列的高度 找出最小值 和最小值的索引*/
+       /* 2.用数组存储 每一列的高度 找出最小值 和最小值的索引*/
         var arrHeight = [];
         //把每一列的初始高度 保存到数组中
         function waterfall() {
@@ -111,8 +135,14 @@ window.onload = function () {
                 //要想设置位置 先要加定位
                 boxes[i].style.position = "absolute";
                 //设置top值 top值就是高度最小的那一列现在的高度
-                boxes[i].style.top = minHeight + "px";
-                boxes[i].style.left = boxes[minHeightIndex].offsetLeft + "px";
+                // boxes[i].style.top = minHeight + "px";
+                boxes[i].style.top = (Math.floor(i / 2)) * 100 + "%";
+                // boxes[i].style.left = boxes[minHeightIndex].offsetLeft + "px";
+                if (i % 2 == 0) {
+                    boxes[i].style.left = 0;
+                }else {
+                     boxes[i].style.left = "50%";
+                }
                 //放置图片后 当前列的高度发生了变化 我们要对数组的值进行更新
                 //然后 后续的循环才能根据新的数组 来重新寻找最小值
 
@@ -127,10 +157,10 @@ window.onload = function () {
             if (bottomed()) {
                 //加载图片
                 var json = [
-                    {"src": "images/img04.JPG"},
                     {"src": "images/img02.JPG"},
-                    {"src": "images/img03.JPG"},
                     {"src": "images/img01.JPG"},
+                    {"src": "images/img05.PNG"},
+                    {"src": "images/img03.JPG"},
                 ];
              /* 6.创建结构  .box > img*/
                 for (var i = 0; i < json.length; i++) {
@@ -158,7 +188,7 @@ window.onload = function () {
             return false;//没有触底
         }
         function getMin(arr) {
-        var min = {};
+        var min = {};   //存储高度最小的图片
         min.index = 0;     //最小值的索引
         min.value = arr[min.index];   //最小值的值
         //遍历数组 一个一个比较

@@ -25,6 +25,26 @@
 .jd_ad .hidden {
     background: rgba(0,0,0,0.6);
 }
+.jd_ad .jd_ad_box .mask {
+    position: relative;
+    margin-top: 40%;
+}
+.jd_ad  img {
+    width: 100%;
+}
+.jd_ad #btn_close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 9999999999999999999999;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: red;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+}
 
 /* 弹出层 */
 .jd_win {
@@ -126,26 +146,6 @@
         -webkit-transform:none;
         transform:none;
     }
-}
-
-.jd_ad  img {
-    position: absolute;
-    top: 24%;
-    left: 50%;
-    margin-left: -150px;
-    margin-top: -118px;
-}
-.jd_ad #btn_close {
-    position: absolute;
-    top: 178px;
-    right: 26px;
-    z-index: 9999999999999999999999;
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-    display: block;
-    text-align: center;
-    line-height: 30px;
 }
 
 /* 头部搜索栏 */
@@ -254,13 +254,16 @@
 
 
 /* 搜索栏 */
-.jd_header .header_box .icon_logo {
-    background-position: 0 -103px;
+.jd_header .header_box .logo_tb {
+    /* background-position: 0 -103px; */
     position: absolute;
-    top: 4px;
-    left: 10px;
-    width: 60px;
-    height: 36px;
+    top: 0;
+    left: -10px;
+    display: block;
+    width: 91px;
+    height: 65px;
+    background: url(../images/tb.png) no-repeat;
+    background-size: 95px 65px;
 }
 .jd_header .header_box .login {
     width: 50px;

@@ -5,43 +5,139 @@ body {
     background-color: #F7F7F7;
 }
 
-a {
-    text-decoration: none;
+/* 布局容器 */
+figure {
+    width: 100%;
+    position: relative;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+/* 广告栏 */
+.jd_ad {
+}
+.jd_ad .jd_ad_box{
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.jd_ad .hidden {
+    background: rgba(0,0,0,0.6);
+}
+.jd_ad .jd_ad_box .mask {
+    position: relative;
+    margin-top: 40%;
+}
+.jd_ad  img {
+    width: 100%;
+}
+.jd_ad #btn_close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 9999999999999999999999;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: red;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+}
+/* 弹出层动画 */
+.bounceInDown{
+    animation: bounceInDown 1s;
+    -webkit-animation: bounceInDown 1s;
+}
+/*bounceInDown*/
+@keyframes bounceInDown {
+     0%{
+         opacity: 0;
+         -webkit-transform: translateY(-3000px);
+         transform: translateY(-3000px);
+     }
+     60%{
+         opacity: 1;
+         -webkit-transform: translateY(25px);
+         transform: translateY(25px);
+     }
+     75%{
+         -webkit-transform: translateY(-10px);
+         transform: translateY(-10px);
+     }
+     90%{
+         -webkit-transform: translateY(5px);
+         transform: translateY(5px);
+     }
+     100%{
+         opacity: 1;
+         -webkit-transform:none;
+         transform:none;
+     }
+ }
+@-webkit-keyframes bounceInDown {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-3000px);
+        transform: translateY(-3000px);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+    75%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    90%{
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:none;
+        transform:none;
+    }
 }
 
 figcaption {
-    font-size: 24px;
+    font: bold 2em "microsoft yahei";
     text-align: center;
-    margin: 20px;
+    color: #808080;
+    background-color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
+figcaption:first-of-type {
+    text-shadow: 1px 1px 0px #FFF, -1px -1px 0px #000;
+}
+figcaption:last-of-type {
+    text-shadow: -1px -1px 0px #FFF, 1px 1px 0px #000;
+}
 .player {
-    width: 720px;
-    height: 360px;
+    width: 100%;
     margin: 0 auto;
     border-radius: 4px;
     background: #000 url(../images/loading.gif) center/300px no-repeat;
     position: relative;
 }
-
 video {
-    display: none;
-    height: 100%;
+    width: 100%;
     margin: 0 auto;
 }
-
 .controls {
-    width: 700px;
+    width: 100%;
     height: 40px;
     background-color: rgb(16, 16, 16);
     border-radius: 4px;
     position: absolute;
-    left: 10px;
+    left: 0px;
     bottom: 5px;
     z-index: 99;
     opacity: 1;
 }
-
 .player:hover .controls {
     opacity: 1;
 }
@@ -72,7 +168,7 @@ video {
 
 /*进度条*/
 .progress {
-    width: 430px;
+    width: 45%;
     height: 10px;
     border-radius: 3px;
     overflow: hidden;
@@ -116,45 +212,55 @@ video {
     height: 20px;
     line-height: 20px;
     position: absolute;
-    left: 490px;
+    left: 225px;
     top: 11px;
     color: #FFF;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* 音频播放器 */
 audio {
+    width: 100%;
+    padding-left: 50%
     height: 30px;
-    margin: 0 36%;
+    color: #d8505c;
+    font-family: "微软雅黑";
 }
 
 /* 瀑布流 */
 #container {
     position: relative;
-    margin: 20px 26px;
+    margin: 35px auto;
+    width:100%;
+    /* background-color: #ccc; */
+
 }
 .box {
+    width: 49%;
+    border-bottom: 5px solid #ccc;
     float: left;
-    /* border: 1px solid #ccc; */
-    /* padding: 5px; */
 }
-#container a {
+.box2 {
+    margin-left: 4px;
+}
+#a_link {
     display: block;
-    position: absolute;
-    top: -40px;
-    left: 40px;
     color: #666;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
-#container a span {
+#a_link span {
     text-align: right;
     font-size: 14px;
     margin-left: 10px;
+    color: deeppink;
 }
 .box  img {
-    width: 212px;
-    height: 160px;
+    width: 100%;
 }
-.box  .last_img {
-    width: 212px;
-    height: 110px;
+.fa-music {
+    color: red;
 }
