@@ -93,9 +93,8 @@ function closeAd () {
     var imgBox = document.getElementById("im");
 
     alice.tap(btnBox,function () {
-        /*加动画*/
-        box.className = "jd_win_box bounceInDown";
-        bodyBox.style.display = "none";
+        imgBox.style.display = "none";
+        bodyBox.removeChild(bodyBox2);
         // window.open("video.html");
     });
 }
