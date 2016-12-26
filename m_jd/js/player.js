@@ -1,8 +1,26 @@
 /*页面文档加载完成之后执行*/
 $(function () {
+    closeAd();
+    var audio = document.getElementById('audio');
+    $('html').one('touchstart',function(){
+        audio.play();
+    });
     player();
-})
+});
+// 弹出广告栏
+function closeAd () {
+    var bodyBox = document.querySelector(".jd_ad");
+    var bodyBox2 = document.querySelector(".jd_ad_box");
+    var box = document.querySelector(".mask");
+    var btnBox = document.getElementById("btn_close");
+    var imgBox = document.getElementById("im");
 
+    alice.tap(btnBox,function () {
+        imgBox.style.display = "none";
+        bodyBox.removeChild(bodyBox2);
+        // window.open("video.html");
+    });
+}
 /*视频播放器*/
 function player () {
     // 初始化
@@ -83,28 +101,10 @@ function player () {
         video.webkitRequestFullScreen();
     });
 }
-
-// 弹出广告栏
-function closeAd () {
-    var bodyBox = document.querySelector(".jd_ad");
-    var bodyBox2 = document.querySelector(".jd_ad_box");
-    var box = document.querySelector(".mask");
-    var btnBox = document.getElementById("btn_close");
-    var imgBox = document.getElementById("im");
-
-    alice.tap(btnBox,function () {
-        imgBox.style.display = "none";
-        bodyBox.removeChild(bodyBox2);
-        // window.open("video.html");
-    });
-}
-
 /*瀑布流 图片资源*/
 window.onload = function () {
     flow();
-    closeAd();
 }
-
 function flow() {
         //高度最小的那一行 然后把图片放到那个位置
         var container = document.getElementById("container");
