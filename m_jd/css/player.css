@@ -28,6 +28,7 @@ figure {
 .jd_ad .jd_ad_box .mask {
     position: relative;
     margin-top: 40%;
+    z-index: 10000;
 }
 .jd_ad  img {
     width: 100%;
@@ -221,10 +222,10 @@ video {
 /* 音频播放器 */
 audio {
     width: 100%;
-    padding-left: 50%
     height: 30px;
     color: #d8505c;
     font-family: "微软雅黑";
+    border: 1px solid red;
 }
 
 /* 瀑布流 */

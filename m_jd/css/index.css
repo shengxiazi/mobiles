@@ -28,6 +28,7 @@
 .jd_ad .jd_ad_box .mask {
     position: relative;
     margin-top: 40%;
+    z-index: 10000;
 }
 .jd_ad  img {
     width: 100%;

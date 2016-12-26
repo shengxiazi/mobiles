@@ -93,12 +93,9 @@ function closeAd () {
     var imgBox = document.getElementById("im");
 
     alice.tap(btnBox,function () {
-        imgBox.style.display = "none";
-        bodyBox.removeChild(bodyBox2);
-        /*显示弹出层*/
-        bodyBox.style.display = "block";
         /*加动画*/
         box.className = "jd_win_box bounceInDown";
+        bodyBox.style.display = "none";
         // window.open("video.html");
     });
 }
